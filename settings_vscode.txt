@@ -1,0 +1,8 @@
+settings.json
+
+{
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.defaultProfile.osx": "/bin/zsh",
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font"
+
+}
