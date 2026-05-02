@@ -6,7 +6,7 @@ https://www.nerdfonts.com/font-downloads
 
 # Install WSL
 wsl --install
-- reboot
+reboot
 wsl --install -d Ubuntu
 
 # Install VSCode
