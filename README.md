@@ -1,3 +1,7 @@
+# Install WSL
+wsl --install
+reboot
+
 # Install Zsh
 
 # Setup Zsh/Starship
