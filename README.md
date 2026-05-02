@@ -58,6 +58,14 @@ brew install font-hack-nerd-font
 
 ## Other Tools
 
+# Install brew
+- sudo apt install build-essential procps curl file git
+- /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+- echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"' >> /home/joro/.zshrc
+- eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+- sudo apt-get install build-essential
+- brew install gcc
+
 ```
 ### Basic tools, nerdfont, fuzzy finders
 sudo apt update
