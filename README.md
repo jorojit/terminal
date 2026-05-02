@@ -5,9 +5,9 @@ https://apps.microsoft.com/detail/9n0dx20hk701?hl=bg-BG&gl=BG
 https://www.nerdfonts.com/font-downloads
 
 # Install WSL
-wsl --install
-reboot
-wsl --install -d Ubuntu
+- wsl --install
+- reboot
+- wsl --install -d Ubuntu
 
 # Install VSCode
 https://code.visualstudio.com/download
