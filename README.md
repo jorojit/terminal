@@ -1,8 +1,23 @@
+# Install Windows Terminal
+https://apps.microsoft.com/detail/9n0dx20hk701?hl=bg-BG&gl=BG
+
+# Install Nerdfonts
+https://www.nerdfonts.com/font-downloads
+
 # Install WSL
 wsl --install
-reboot
+- reboot
+wsl --install -d Ubuntu
+
+# Install VSCode
+https://code.visualstudio.com/download
 
 # Install Zsh
+copy .zshrc file
+sudo apt update && sudo apt upgrade -y
+sudo apt install zsh -y
+chsh -s /usr/bin/zsh
+
 
 # Setup Zsh/Starship
 
