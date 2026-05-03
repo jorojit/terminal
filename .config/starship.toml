@@ -1,5 +1,3 @@
-# ~/.config/starship.toml
-
 # Inserts a blank line between shell prompts
 add_newline = true
 
@@ -26,14 +24,21 @@ format = '[$env_value](bold yellow)'
 variable = "STARSHIP_DEVICE"
 disabled = false
 
-# ---
-
 [aws]
-format = ''
+format = 'on [$symbol($profile )(\($region\) )]($style)'
 style = 'bold blue'
+symbol = '🅰 '
 [aws.region_aliases]
 ap-southeast-2 = 'au'
 us-east-1 = 'va'
+[aws.profile_aliases]
+CompanyGroupFrobozzOnCallAccess = 'Frobozz'
+
+[azure]
+disabled = false
+format = 'on [$symbol($subscription)]($style) '
+symbol = '󰠅 '
+style = 'blue bold'
 
 # Shows current directory
 [directory]
@@ -48,7 +53,7 @@ format = "[$path]($style)[$read_only]($read_only_style) "
 [git_branch]
 symbol = "󰊢 "
 format = "[$symbol$branch]($style) "
-# truncation_length = 4
+# truncation_length = 5
 truncation_symbol = "…/"
 style = "bold green"
 
@@ -71,11 +76,11 @@ deleted = "󰆴"
 # Shows kubernetes context and namespace
 [kubernetes]
 format = '[󱃾 $context\($namespace\)](bold purple) '
-disabled = true
+disabled = false
 
 # ---
 
-# Disable some modules that aren't needed anymore
+# Modules status
 [username]
 disabled = true
 
@@ -89,12 +94,6 @@ disabled = true
 disabled = false
 
 [python]
-disabled = true
-
-[nodejs]
-disabled = true
-
-[ruby]
 disabled = true
 
 [terraform]
