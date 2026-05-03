@@ -4,7 +4,7 @@ MFILE="/System/Library/CoreServices/SystemVersion.plist"
 if [[ -f $LFILE ]]; then
   _distro=$(awk '/^ID=/' /etc/*-release | awk -F'=' '{ print tolower($2) }')
 elif [[ -f $MFILE ]]; then
-  _distro="macos"
+  _distro="ubuntu"
 fi
 
 # set an icon based on the distro
@@ -32,7 +32,7 @@ case $_distro in
     *manjaro*)               ICON="󰣫";;
     *rhel*)                  ICON="󰣷";;
     *macos*)                 ICON="󰀵";;
-    *)                       ICON="󰌽";;
+    *)                       ICON=$'\uf31b';;
 esac
 
 export STARSHIP_DISTRO="$ICON"
