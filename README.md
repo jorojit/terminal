@@ -46,6 +46,17 @@ git clone https://github.com/Pilaton/OhMyZsh-full-autoupdate.git ${ZSH_CUSTOM:-~
 # Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
 
+# Install Helm
+sudo apt-get install curl gpg apt-transport-https --yes
+curl -fsSL https://packages.buildkite.com/helm-linux/helm-debian/gpgkey | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
+echo "deb [signed-by=/usr/share/keyrings/helm.gpg] https://packages.buildkite.com/helm-linux/helm-debian/any/ any main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+sudo apt-get update
+sudo apt-get install helm
+
+# Install Docker Desktop
+https://docs.docker.com/desktop/setup/install/windows-install/
+
+
 # Nerd Fonts - Hack font (via git)
 git clone --depth 1 https://github.com/ryanoasis/nerd-fonts
 cd nerd-fonts
@@ -55,6 +66,10 @@ cd nerd-fonts
 brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
 ```
+- **Nerd Font**: JetBrainsMono Nerd Font must be installed and set as the terminal font. The tmux status bar uses Nerd Font glyphs — without it, icons render as boxes.
+  - Mac: `brew install --cask font-jetbrains-mono-nerd-font`
+  - Linux: download from https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+
 
 ## Other Tools
 
